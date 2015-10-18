@@ -1,7 +1,7 @@
 Backbone Class
 ====================
 
-Class is the missing "Backbone.Class" in Backbone.js.  It provides clean JavaScript inheritence via the Backbone.extend pattern and modified via https://github.com/lukasolson/Backbone-Super for simple `this._super()` calls.  On instantiation, an initialize method is called and if a parameters object is passed, unless overridden, it will be pushed on to an `options` hash.  Additionally, because backbone-class extends Backbone.Events, event dispatch can be achieved by adding listeners, triggering events, and removing listeners per the Backbone.js spec.
+Class is the missing "Backbone.Class" in Backbone.js.  It provides clean JavaScript inheritance via the Backbone.extend pattern and modified via https://github.com/lukasolson/Backbone-Super for simple `this._super()` calls.  On instantiation, an initialize method is called and if a parameters object is passed, unless overridden, it will be pushed on to an `options` hash.  Additionally, because backbone-class extends Backbone.Events, event dispatch can be achieved by adding listeners, triggering events, and removing listeners per the Backbone.js spec.
 
 Best used with Browserify! https://github.com/substack/node-browserify
 
@@ -20,7 +20,7 @@ Tests
 Example
 -------
 
-**Inheritence**
+**Inheritance**
 
 ```
 var Klass = require('backbone-class')

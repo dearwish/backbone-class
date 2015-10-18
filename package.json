@@ -6,7 +6,7 @@
     "backbone",
     "class",
     "simple",
-    "inheritence",
+    "inheritance",
     "backbone-class",
     "Backbone.Class"
   ],
@@ -29,38 +29,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/damassi/backbone-class"
+    "url": "https://github.com/dearwish/backbone-class"
   },
   "contributors": [
     {
-      "name": "Christopher Pappas",
-      "email": "damassi.pappas@gmail.com"
+      "name": "David Roberin",
+      "email": "davewish@gmail.com"
     }
   ],
-  "readmeFilename": "README.md",
-  "readme": "Backbone Class\n====================\n\nClass is the missing \"Backbone.Class\" in Backbone.js.  It provides clean JavaScript inheritence via the Backbone.extend pattern and modified via https://github.com/lukasolson/Backbone-Super for simple `this._super()` calls.  On instantiation, an initialize method is called and if a parameters object is passed, unless overridden, it will be pushed on to an `options` hash.  Additionally, because backbone-class extends Backbone.Events, event dispatch can be achieved by adding listeners, triggering events, and removing listeners per the Backbone.js spec.\n\nBest used with Browserify! https://github.com/substack/node-browserify\n\nInstallation\n------------\n- `npm install backbone-class`\n\nTests\n-----\n\n- `npm install -g grunt-cli`\n- `npm install`\n- `npm test`\n\n\nExample\n-------\n\n**Inheritence**\n\n```\nvar Klass = require('backbone-class')\n\nvar Person = Klass.extend({\n  language: function() {\n    return 'The method of human communication, either spoken or written, consisting of the use of words in a structured and conventional way.'\n  }\n})\n\nvar Animal = Person.extend({\n  meaning: function() {\n    return 'Intended to communicate something that is not directly expressed.'\n  }\n})\n\nvar animal = new Animal({\n  defaultLanguage: 'Bark'\n})\n\nconsole.log( animal.options.defaultLanguage )\nconsole.log( animal.language() )\nconsole.log( animal.meaning() )\n\n```\n\n**Supers**\n\n```\nvar Person = Klass.extend({\n  language: function (lang) {\n    return 'Speaking ' + (lang || 'English')\n  }\n})\n\nvar person = new Person()\nconsole.log( person.language() ) // 'Speaking English'\n\nvar Animal = Person.extend({\n  language: function(lang) {\n    this._super(lang)\n  }\n})\n\nvar animal = new Animal()\n\nconsole.log( animal.language('Bark') ) // 'Speaking Bark'\n\n```\n\n**Eventing**\n\n```\nvar Person = Klass.extend({\n  initialize: function() {\n    this.on('speak', this.onSpeak.bind(this))\n  },\n\n  onSpeak: function() {\n    return 'Hello Human :)'\n  }\n})\n\nvar person = new Person()\nperson.trigger('speak')\n\n```\n\nMore Info\n----------\n\nClass inheritance mirrors Backbone.js precisely, but without the additional method baggage that is normally associated with Models, Views and Collections; feel free to check out http://backbonejs.org/ for more info.  Also, see https://github.com/lukasolson/Backbone-Super for more info on the _super() method.\n\n\nThanks\n-------\n\n- http://backbonejs.org/\n- https://github.com/lukasolson/Backbone-Super\n",
   "bugs": {
-    "url": "https://github.com/damassi/backbone-class/issues"
-  },
-  "_id": "backbone-class@0.0.1",
-  "dist": {
-    "shasum": "e6cef1889de621feae36de985d8b64d64b81bdc9",
-    "tarball": "http://registry.npmjs.org/backbone-class/-/backbone-class-0.0.1.tgz"
-  },
-  "_from": "backbone-class@~0.0.1",
-  "_npmVersion": "1.3.11",
-  "_npmUser": {
-    "name": "damassi",
-    "email": "damassi.pappas@gmail.com"
+    "url": "https://github.com/dearwish/backbone-class/issues"
   },
   "maintainers": [
     {
-      "name": "damassi",
-      "email": "damassi.pappas@gmail.com"
+      "name": "dearwish",
+      "email": "davewish@gmail.com"
     }
   ],
   "directories": {},
-  "_shasum": "e6cef1889de621feae36de985d8b64d64b81bdc9",
-  "_resolved": "https://registry.npmjs.org/backbone-class/-/backbone-class-0.0.1.tgz",
-  "homepage": "https://github.com/damassi/backbone-class"
+  "homepage": "https://github.com/dearwish/backbone-class"
 }
