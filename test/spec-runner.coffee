@@ -1,5 +1,4 @@
 Klass  = require '../lib/backbone-class'
-_      = require 'underscore'
 chai   = require 'chai'
 expect = chai.expect
 
