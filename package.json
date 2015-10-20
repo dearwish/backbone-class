@@ -1,6 +1,6 @@
 {
   "name": "backbone-class",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Backbone Class is the missing 'Backbone.Class' in Backbone.js which provides clean JavaScript class inheritence via the Backbone.extend pattern",
   "license": "MIT",
   "keywords": [
@@ -11,7 +11,7 @@
     "backbone-class",
     "Backbone.Class"
   ],
-  "main": "index.js",
+  "main": "./lib/backbone-class.js",
   "scripts": {
     "test": "grunt test"
   },
